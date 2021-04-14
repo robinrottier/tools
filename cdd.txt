@@ -5,7 +5,7 @@
 # Use ~ at start for userprofile directory
 # Or use %USERPROFILE% syntax for any variable substituion
 # 
-u ~
-r ~\source\repos
+u %USERPROFILE%
+r %USERPROFILE%\source\repos
 s %USERPROFILE%\source
 t %USERPROFILE%\tools

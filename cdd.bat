@@ -28,6 +28,10 @@ if not exist %af% echo Cant find alias file cdd.txt&exit /b 1
 for /f "tokens=1*" %%l in ( %af% ) do if "%d%" == "%%l" set d=%%m&goto :done
 rem couldnt find alias? just assume its the directory then
 
+rem check for source/respos matching name...
+if exist "%USERPROFILE%\source\repos\%d%" set d=%USERPROFILE%\source\repos\%d%&goto :done
+
+
 :done 
 
 rem if d contains %env% syntax then this will epxand it...(note the "call" to do the double process)
